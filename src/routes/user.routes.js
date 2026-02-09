@@ -6,16 +6,17 @@ const router = Router()
 
 
 router.route("/register").post(
-    upload.fields([
-        {
-            name: "avatar",
-            maxcount: 1
-        },
-        {
-            name: "coverImage",
-            maxcount: 1
-        }
-    ]),
+    // Change maxcount to maxCount
+upload.fields([
+    {
+        name: "avatar",
+        maxCount: 1 // Fixed capital C
+    },
+    {
+        name: "coverImage",
+        maxCount: 1 // Fixed capital C
+    }
+]),
     registerUser
 )
 

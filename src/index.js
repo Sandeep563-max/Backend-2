@@ -3,7 +3,11 @@ import dotenv from "dotenv"
 import connectDB from "./db/index.js"
 import { app } from "./app.js";
 
-dotenv.config()
+import path from "path";
+
+dotenv.config({
+    path: path.resolve(process.cwd(), ".env")
+})
 
 connectDB()
 .then(() => {
